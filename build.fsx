@@ -110,6 +110,8 @@ module BasicTasks =
     let clean = BuildTask.create "Clean" [] {
         !! "src/**/bin"
         ++ "src/**/obj"
+        ++ "tests/**/bin"
+        ++ "tests/**/obj"
         ++ "pkg"
         ++ "bin"
         |> Shell.cleanDirs 
@@ -117,6 +119,7 @@ module BasicTasks =
 
     let restore = BuildTask.create "Restore" [clean] {
         !! "src/**/*.*proj"
+        ++ "tests/**/*.*proj"
         |> Seq.iter (DotNet.restore id)
     }
 

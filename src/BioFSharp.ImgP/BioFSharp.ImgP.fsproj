@@ -37,6 +37,7 @@
     <None Include="Playground\Trace.fsx" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.*"/>
     <PackageReference Include="FSharp.Stats" Version="0.4.0" />
     <PackageReference Include="FSharpAux" Version="1.0.0" />
     <PackageReference Include="Microsoft.Xaml" Version="4.0.0.1" />
